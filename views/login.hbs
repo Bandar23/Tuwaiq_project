@@ -1,0 +1,94 @@
+<html>
+  <head>
+    <title>{{title}}</title>
+    <style>
+      body{width: auto; text-align: center;} form{width:300px;margin-left: 300px;}
+    </style>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <link rel='stylesheet' href='/style/style.css' />
+
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    />
+    <script
+      src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+    ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"
+    ></script>
+  </head>
+  <body>
+ <header class="site-header">
+      <nav>
+        <div class="dropdown">
+          <span>القائمة الرئيسية <i class="fa-solid fa-list"></i></span>
+          <div class="dropdown-content" style="display: none;">
+            <a class="a__item" href="/">ةشهى</a><br />
+            <a class="a__item" href="/pages/book">الكتب</a><br />
+            <a class="a__item" href="/pages/turbulence">الإضطررابات </a><br />
+            <a class="a__item" href="/pages/scientists">سير العلماء</a><br />
+           <button disabled style="border:none;">  <span style=" border-radius:15px 15px 30px; background:rgba(79, 99, 99, 0.07);;
+  padding:10px;width:30px;height:30px; margin-top: 20px; color:blue;font-size:15px;padding-top:10px; margin-top:10px;">قريباً</span> الاختبارات و المقاييس</button></a>
+            <a class="a__item" href="/pages/about">من نحن</a><br />
+            </ul>
+          </div>
+        </div>
+      
+
+        <ul>
+          <li class="nav__item"><a class="a__item" href="/pages/singin" style="margin-bottom:10px;"> SingIn</a></li>
+          <li class="nav__item"><a class="a__item" href="/pages/signup" style="margin-bottom:10px;">SignUp</a></li>
+          <li class="nav__item"><a class="a__item" href="/pages/companys">Companys</a></li>
+          <li class="nav__item"><a class="a__item" href="/pages/parts">Automotive Parts</a></li>
+          <li class="nav__item"><a class="a__item" href="/pages/about">About Us  </a></li>
+        </ul>
+      </nav>
+    </header>
+ 
+    <div class="container">
+         {{#each error}}
+                <ul>
+                    <li> <div class="alert alert-danger" role="alert">Error:<b>{{this}}</b></li><br/><br/>
+                </ul>
+                {{/each}}
+      <div class="row">
+        <div class="col">
+          <div class="form-login">
+            <form method="post" action="/pages/login">
+              <h3>Login</h3>
+
+              <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Email</label>
+                <input type="email" class="form-control" name="email" />
+              </div>
+              <div class="mb-3">
+                <label
+                  for="exampleInputPassword1"
+                  class="form-label"
+                >password</label>
+                <input
+                  type="password"
+                  class="form-control"
+                  name="password"
+                  id="exampleInputPassword1"
+                />
+
+              </div>
+              <div class="mb-3 form-check">
+                <label
+                  style="color: blue;"
+                  class="form-check-label"
+                  for="exampleCheck1"
+                ><a href="#">Forget Your Paasword ?</a></label><br />
+              </div>
+              <button type="submit" class="btn btn-primary">Login</button>
+            </form>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </body>
+</htm>

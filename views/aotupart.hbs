@@ -1,0 +1,103 @@
+<html>
+  <head>
+    <style>
+       
+             .container{
+                height:755px;
+                text-align: center;
+                margin: 30px 30px 30px 30px;
+                box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+
+            }
+        
+            .container-pic{
+                text-align: center;
+                display: inline-block;  
+                height:255px;
+                width:550px;
+                margin: 5px 5px 5px 5px;
+                
+            }
+    </style>
+    <title>{{title}}</title>
+    
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <link rel='stylesheet' href='/style/style.css' />
+
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    />
+    <script
+      src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+    ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"
+    ></script>
+  </head>
+  <body>
+ <header class="site-header">
+      <nav>
+        <div class="dropdown">
+          <span>القائمة الرئيسية <i class="fa-solid fa-list"></i></span>
+          <div class="dropdown-content" style="display: none;">
+            <a class="a__item" href="/">ةشهى</a><br />
+            <a class="a__item" href="/pages/book">الكتب</a><br />
+            <a class="a__item" href="/pages/turbulence">الإضطررابات </a><br />
+            <a class="a__item" href="/pages/scientists">سير العلماء</a><br />
+           <button disabled style="border:none;">  <span style=" border-radius:15px 15px 30px; background:rgba(79, 99, 99, 0.07);;
+  padding:10px;width:30px;height:30px; margin-top: 20px; color:blue;font-size:15px;padding-top:10px; margin-top:10px;">قريباً</span> الاختبارات و المقاييس</button></a>
+            <a class="a__item" href="/pages/about">من نحن</a><br />
+            </ul>
+          </div>
+        </div>
+      
+        <ul>
+          <li class="nav__item"><a class="a__item" href="/pages/singin" style="margin-bottom:10px;"> SingIn</a></li>
+          <li class="nav__item"><a class="a__item" href="/pages/signup" style="margin-bottom:10px;">SignUp</a></li>
+          <li class="nav__item"><a class="a__item" href="/pages/companys">Companys</a></li>
+          <li class="nav__item"><a class="a__item" href="/pages/parts">Automotive Parts</a></li>
+          <li class="nav__item"><a class="a__item" href="/pages/about">About Us  </a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <title>{{title}}</title>
+<div class="content-details">
+ 
+
+             <h3 dir="rtl">{{doc.name}}</h3><br/>
+          <img class="card-img-top" src="/images/{{doc.image}}" alt="Card image cap">
+          <p dir="rtl"><b>{{{doc.Brife}}}</b></p>
+
+  
+        <div class="container">
+            <div class="wrapper">
+                 {{#each items}}
+                <div class="container-pic">
+<div class="card" style="width:28rem;">
+  <img class="card-img-top" src="/images/{{this.image}}" alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title">{{this.name}}</h5>
+    <ul>
+        <li style="margin-left:5px;">Type:{{this.type}}</li><br/>
+        <li>Price:{{this.price}}</li>
+    </ul>
+    <a href="#" class="btn btn-primary">+</a>
+  </div>
+
+                </div>
+                {{/each}}
+            </div>
+        </div>
+   
+
+
+       
+
+
+
+    
+</body>
+</html>
